@@ -13,6 +13,9 @@
 		6DC5AAB51BC2A49600F11ED4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DC5AAB31BC2A49600F11ED4 /* Main.storyboard */; };
 		6DC5AAB71BC2A49600F11ED4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DC5AAB61BC2A49600F11ED4 /* Assets.xcassets */; };
 		6DC5AABA1BC2A49600F11ED4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DC5AAB81BC2A49600F11ED4 /* LaunchScreen.storyboard */; };
+		6DC5AAD21BC56A2900F11ED4 /* HBAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC5AACB1BC56A2900F11ED4 /* HBAlertController.m */; settings = {ASSET_TAGS = (); }; };
+		6DC5AAD31BC56A2900F11ED4 /* HBAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC5AACF1BC56A2900F11ED4 /* HBAlertView.m */; settings = {ASSET_TAGS = (); }; };
+		6DC5AAD41BC56A2900F11ED4 /* HBAlertViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC5AAD11BC56A2900F11ED4 /* HBAlertViewUtil.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,14 @@
 		6DC5AAB61BC2A49600F11ED4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6DC5AAB91BC2A49600F11ED4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6DC5AABB1BC2A49600F11ED4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DC5AACA1BC56A2900F11ED4 /* HBAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBAlertController.h; sourceTree = "<group>"; };
+		6DC5AACB1BC56A2900F11ED4 /* HBAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBAlertController.m; sourceTree = "<group>"; };
+		6DC5AACC1BC56A2900F11ED4 /* HBAlertDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBAlertDelegate.h; sourceTree = "<group>"; };
+		6DC5AACD1BC56A2900F11ED4 /* HBAlertProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBAlertProtocol.h; sourceTree = "<group>"; };
+		6DC5AACE1BC56A2900F11ED4 /* HBAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBAlertView.h; sourceTree = "<group>"; };
+		6DC5AACF1BC56A2900F11ED4 /* HBAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBAlertView.m; sourceTree = "<group>"; };
+		6DC5AAD01BC56A2900F11ED4 /* HBAlertViewUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBAlertViewUtil.h; sourceTree = "<group>"; };
+		6DC5AAD11BC56A2900F11ED4 /* HBAlertViewUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBAlertViewUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +69,7 @@
 		6DC5AAA91BC2A49600F11ED4 /* TestAlertViewApp */ = {
 			isa = PBXGroup;
 			children = (
+				6DC5AAC11BC2A4E200F11ED4 /* HBAlertViewUtil */,
 				6DC5AAAD1BC2A49600F11ED4 /* AppDelegate.h */,
 				6DC5AAAE1BC2A49600F11ED4 /* AppDelegate.m */,
 				6DC5AAB01BC2A49600F11ED4 /* ViewController.h */,
@@ -77,6 +89,21 @@
 				6DC5AAAB1BC2A49600F11ED4 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6DC5AAC11BC2A4E200F11ED4 /* HBAlertViewUtil */ = {
+			isa = PBXGroup;
+			children = (
+				6DC5AACA1BC56A2900F11ED4 /* HBAlertController.h */,
+				6DC5AACB1BC56A2900F11ED4 /* HBAlertController.m */,
+				6DC5AACC1BC56A2900F11ED4 /* HBAlertDelegate.h */,
+				6DC5AACD1BC56A2900F11ED4 /* HBAlertProtocol.h */,
+				6DC5AACE1BC56A2900F11ED4 /* HBAlertView.h */,
+				6DC5AACF1BC56A2900F11ED4 /* HBAlertView.m */,
+				6DC5AAD01BC56A2900F11ED4 /* HBAlertViewUtil.h */,
+				6DC5AAD11BC56A2900F11ED4 /* HBAlertViewUtil.m */,
+			);
+			name = HBAlertViewUtil;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,9 +176,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DC5AAD21BC56A2900F11ED4 /* HBAlertController.m in Sources */,
+				6DC5AAD41BC56A2900F11ED4 /* HBAlertViewUtil.m in Sources */,
 				6DC5AAB21BC2A49600F11ED4 /* ViewController.m in Sources */,
 				6DC5AAAF1BC2A49600F11ED4 /* AppDelegate.m in Sources */,
 				6DC5AAAC1BC2A49600F11ED4 /* main.m in Sources */,
+				6DC5AAD31BC56A2900F11ED4 /* HBAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +294,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TestAlertViewApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.poropi.TestAlertViewApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -275,6 +306,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TestAlertViewApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.poropi.TestAlertViewApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
